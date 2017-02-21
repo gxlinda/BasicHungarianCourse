@@ -23,15 +23,15 @@ public class Main3Activity extends AppCompatActivity {
         _Data = (Datastorage) intent.getSerializableExtra("dataobject");
 
         TextView scoreView = (TextView) findViewById(R.id.score);
-        scoreView.setText("Your score is " + _Data.score + " points out of 11");
+        scoreView.setText("Your score is " + _Data.score + " points out of 8");
 
         TextView evaluationView = (TextView) findViewById(evaluation);
 
-        if (_Data.score <= 3) {
+        if (_Data.score <= 2) {
            evaluationView.setText(R.string.evaluationBad);
-        } else if (_Data.score <= 6) {
+        } else if (_Data.score <= 4) {
             evaluationView.setText(R.string.evaluationNotBad);
-        } else if (_Data.score <= 9) {
+        } else if (_Data.score <= 6) {
             evaluationView.setText(R.string.evaluationReallyGood);
         } else {
             evaluationView.setText(R.string.evaluationExcellentJob);
