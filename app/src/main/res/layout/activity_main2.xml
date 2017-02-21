@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    tools:context="hu.gearxpert.basichungariancourse.Main2Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            style="@style/TestQuestion"
+            android:text="@string/test1_intro" />
+
+        <!--Test1-->
+        <!--Card1-->
+
+        <LinearLayout style="@style/CardLayout">
+
+            <TextView
+                style="@style/CardHeaderTheme"
+                android:text="in the house" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radio_q1a1"
+                    style="@style/RadioButton"
+                    android:text="házba" />
+
+                <RadioButton
+                    android:id="@+id/radio_q1a2"
+                    style="@style/RadioButton"
+                    android:text="házban" />
+
+                <RadioButton
+                    android:id="@+id/radio_q1a3"
+                    style="@style/RadioButton"
+                    android:text="házból" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+
+        <!--Card2-->
+
+        <LinearLayout style="@style/CardLayout">
+
+            <TextView
+                style="@style/CardHeaderTheme"
+                android:text="from the forest" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radio_q2a1"
+                    style="@style/RadioButton"
+                    android:text="erdőből" />
+
+                <RadioButton
+                    android:id="@+id/radio_q2a2"
+                    style="@style/RadioButton"
+                    android:text="erdőben" />
+
+
+                <RadioButton
+                    android:id="@+id/radio_q2a3"
+                    style="@style/RadioButton"
+                    android:text="erdőbe" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+
+        <!--Card3-->
+
+        <LinearLayout style="@style/CardLayout">
+
+            <TextView
+                style="@style/CardHeaderTheme"
+                android:text="into the city" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radio_q3a1"
+                    style="@style/RadioButton"
+                    android:text="városban" />
+
+                <RadioButton
+                    android:id="@+id/radio_q3a2"
+                    style="@style/RadioButton"
+                    android:text="városba" />
+
+                <RadioButton
+                    android:id="@+id/radio_q3a3"
+                    style="@style/RadioButton"
+                    android:text="városból" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+            <!--Test2-->
+
+
+
+        <TextView
+            style="@style/TestQuestion"
+            android:text="@string/test2_intro" />
+
+        <LinearLayout style="@style/CardLayout">
+
+            <CheckBox
+                android:id="@+id/cb1"
+                style="@style/CheckBox"
+                android:text="ház" />
+
+            <CheckBox
+                android:id="@+id/cb2"
+                style="@style/CheckBox"
+                android:text="szekrény" />
+
+            <CheckBox
+                android:id="@+id/cb3"
+                style="@style/CheckBox"
+                android:text="erdő" />
+
+            <CheckBox
+                android:id="@+id/cb4"
+                style="@style/CheckBox"
+                android:text="város" />
+        </LinearLayout>
+
+        <!--Test3-->
+
+        <TextView
+            style="@style/TestQuestion"
+            android:text="@string/test3_intro" />
+
+        <LinearLayout style="@style/CardLayout">
+
+            <TextView
+                style="@style/CardHeaderTheme"
+                android:text="házban" />
+
+            <EditText
+                android:id="@+id/editText1"
+                style="@style/EditText" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/CardLayout">
+
+            <TextView
+                style="@style/CardHeaderTheme"
+                android:text="erdőből" />
+
+            <EditText
+                android:id="@+id/editText2"
+                style="@style/EditText" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/CardLayout">
+
+            <TextView
+                style="@style/CardHeaderTheme"
+                android:text="városba" />
+
+            <EditText
+                android:id="@+id/editText3"
+                style="@style/EditText" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <!--Első alkalommal látható-->
+        <Button
+            android:id="@+id/checkMyScore"
+            style="@style/ButtonLayout"
+            android:onClick="clickedButtonScore"
+            android:text="Let's see my result"
+            android:layout_centerInParent="true"/>
+
+        <!--Ellenőrzéskor látható-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+
+            <Button
+                android:id="@+id/startNewGame"
+                style="@style/ButtonLayout"
+                android:text="I try it again!"
+                android:onClick="wantNewGame"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/exit"
+                style="@style/ButtonLayout"
+                android:text="Exit"
+                android:onClick="exit"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

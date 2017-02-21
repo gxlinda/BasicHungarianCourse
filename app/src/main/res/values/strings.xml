@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Basic Hungarian Course</string>
+    <string name="intro1">In this session you will practice 3 types of basic suffixes used to define where something is, or where it is going to.\n\nWe will use only 4 Hungarian words:</string>
+    <string name="intro2">In Hungarian language the usage of suffixes depends on the sound order of the word. There are 3 types of sound orders: high, deep and mixed. In this session we will practice only the first two types. In these types the used suffix has to be in the same sound order as the word itself.</string>
+    <string name="intro3">Vocals of high sound order: e, é, i, í, ö, ő, ü, ű\nVocals of deep sound order: a, á, o, ó, u, ú</string>
+    <string name="intro4">Take a look at the below picture which shows you the suffixes you can use to express the correct states.\n\nIf you are ready to practice, click on the start button.</string>
+    <string name="test1_intro">Choose the correct form of the Hungarian words!</string>
+    <string name="test2_intro">With which words can you use the suffix: -ben?</string>
+    <string name="test3_intro">Enter the correct translations into the edit fields!</string>
+    <string name="enter">Enter the correct translation here</string>
+    <string name="score_intro">Result of Basic Suffixes session</string>
+    <string name="evaluationBad">Is this really you are capable of...? You should read again the rules and try again to reach a better score!</string>
+    <string name="evaluationNotBad">Not bad, but you need a little more practice to make it much better!</string>
+    <string name="evaluationReallyGood">Really good! If you learn a bit more, you can be an expert!</string>
+    <string name="evaluationExcellentJob">Excellent job! You just became the master of basic Hungarian suffixes!</string>
+</resources>
