@@ -12,7 +12,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
         <TextView
             style="@style/TestQuestion"
             android:text="@string/test1_intro" />
@@ -49,8 +48,6 @@
 
         </LinearLayout>
 
-
-
         <!--Card2-->
 
         <LinearLayout style="@style/CardLayout">
@@ -82,8 +79,6 @@
             </RadioGroup>
 
         </LinearLayout>
-
-
 
         <!--Card3-->
 
@@ -117,8 +112,6 @@
         </LinearLayout>
 
             <!--Test2-->
-
-
 
         <TextView
             style="@style/TestQuestion"
@@ -193,7 +186,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <!--Első alkalommal látható-->
+            <!--Can be seen only after the test-->
         <Button
             android:id="@+id/checkMyScore"
             style="@style/ButtonLayout"
@@ -201,7 +194,7 @@
             android:text="Let's see my result"
             android:layout_centerInParent="true"/>
 
-        <!--Ellenőrzéskor látható-->
+            <!--Cab be seen only at checking-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

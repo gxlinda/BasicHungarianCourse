@@ -25,43 +25,43 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        //Visszatöltjük a Main3Activityből a Datastorage objektumunkat az összes mentett adattal
+        //Reloads the Datadtorage object from Main3Activity with the saved data
         Intent intent = getIntent();
         dataFromThirdScreen = (Datastorage) intent.getSerializableExtra("_dataobject");
             if (dataFromThirdScreen != null) {
                 showCorrectAnswers();
 
-                //letiltjük a kattogtatás lehetőségét
-                ((RadioButton) findViewById(R.id.radio_q1a1)).setEnabled(false);
-                ((RadioButton) findViewById(R.id.radio_q1a2)).setEnabled(false);
-                ((RadioButton) findViewById(R.id.radio_q1a3)).setEnabled(false);
-                ((RadioButton) findViewById(R.id.radio_q2a1)).setEnabled(false);
-                ((RadioButton) findViewById(R.id.radio_q2a2)).setEnabled(false);
-                ((RadioButton) findViewById(R.id.radio_q2a3)).setEnabled(false);
-                ((RadioButton) findViewById(R.id.radio_q3a1)).setEnabled(false);
-                ((RadioButton) findViewById(R.id.radio_q3a2)).setEnabled(false);
-                ((RadioButton) findViewById(R.id.radio_q3a3)).setEnabled(false);
-                ((CheckBox) findViewById(R.id.cb1)).setEnabled(false);
-                ((CheckBox) findViewById(R.id.cb2)).setEnabled(false);
-                ((CheckBox) findViewById(R.id.cb3)).setEnabled(false);
-                ((CheckBox) findViewById(R.id.cb4)).setEnabled(false);
-                ((EditText) findViewById(R.id.editText1)).setEnabled(false);
-                ((EditText) findViewById(R.id.editText2)).setEnabled(false);
-                ((EditText) findViewById(R.id.editText3)).setEnabled(false);
+                //disables the possible clicks after the user finished the test and checks the results
+                findViewById(R.id.radio_q1a1).setEnabled(false);
+                findViewById(R.id.radio_q1a2).setEnabled(false);
+                findViewById(R.id.radio_q1a3).setEnabled(false);
+                findViewById(R.id.radio_q2a1).setEnabled(false);
+                findViewById(R.id.radio_q2a2).setEnabled(false);
+                findViewById(R.id.radio_q2a3).setEnabled(false);
+                findViewById(R.id.radio_q3a1).setEnabled(false);
+                findViewById(R.id.radio_q3a2).setEnabled(false);
+                findViewById(R.id.radio_q3a3).setEnabled(false);
+                findViewById(R.id.cb1).setEnabled(false);
+                findViewById(R.id.cb2).setEnabled(false);
+                findViewById(R.id.cb3).setEnabled(false);
+                findViewById(R.id.cb4).setEnabled(false);
+                findViewById(R.id.editText1).setEnabled(false);
+                findViewById(R.id.editText2).setEnabled(false);
+                findViewById(R.id.editText3).setEnabled(false);
 
-                //letiltjuk az alsó Buttont
-                ((Button) findViewById(R.id.checkMyScore)).setVisibility(View.GONE);
-                //megjelenítjük a két új Buttont
-                ((Button) findViewById(R.id.startNewGame)).setVisibility(View.VISIBLE);
-                ((Button) findViewById(R.id.exit)).setVisibility(View.VISIBLE);
+                //bottom Buttun is disabled
+                findViewById(R.id.checkMyScore).setVisibility(View.GONE);
+                //2 new Buttons enabled instead of the old one
+                findViewById(R.id.startNewGame).setVisibility(View.VISIBLE);
+                findViewById(R.id.exit).setVisibility(View.VISIBLE);
 
             }
 
             if (dataFromThirdScreen == null) {
 
-                //kezdéskor letiltjük az ellenőrzéskori két alsó gombot
-                ((Button) findViewById(R.id.startNewGame)).setVisibility(View.INVISIBLE);
-                ((Button) findViewById(R.id.exit)).setVisibility(View.INVISIBLE);
+                //at the beginning the 2 bottom Buttons are disabled, they will be used only at the checking
+                findViewById(R.id.startNewGame).setVisibility(View.INVISIBLE);
+                findViewById(R.id.exit).setVisibility(View.INVISIBLE);
             }
 
     }
@@ -84,10 +84,10 @@ public class Main2Activity extends AppCompatActivity {
     {
 
         /**
-         * Megnézzük, mit jelölt be a felhasználó, és eltároljuk int-ként
+         * Check what th euser has choosen, and saves it as int
          */
 
-        // első RadioGroup
+        // 1st RadioGroup
         if ( ((RadioButton) findViewById(R.id.radio_q1a1)).isChecked() ) {
             Data.q1selected = R.id.radio_q1a1;
         }
@@ -101,7 +101,7 @@ public class Main2Activity extends AppCompatActivity {
             Data.q1selected = 2;
         }
 
-        //második RadioGroup
+        //2nd RadioGroup
 
         if ( ((RadioButton) findViewById(R.id.radio_q2a1)).isChecked() ) {
             Data.q2selected = R.id.radio_q2a1;
@@ -116,7 +116,7 @@ public class Main2Activity extends AppCompatActivity {
             Data.q2selected = 2;
         }
 
-        //harmadik RadioGroup
+        //3rd RadioGroup
 
         if ( ((RadioButton) findViewById(R.id.radio_q3a1)).isChecked() ) {
             Data.q3selected = R.id.radio_q3a1;
@@ -131,7 +131,7 @@ public class Main2Activity extends AppCompatActivity {
             Data.q3selected = 2;
         }
 
-        //megnézzük, hogy a helyeseket jelölte-e, és ha igen, akkor a változók értékét átállítjuk 1-re
+        //checks if the correct answer was selected, and if it was the correct one, the variables are set to 1
 
         RadioButton radio_q1_correct = (RadioButton) findViewById(R.id.radio_q1a2);
         if ( radio_q1_correct.isChecked() )
@@ -153,7 +153,7 @@ public class Main2Activity extends AppCompatActivity {
 
     }
 
-    //Megnézzük, hogy a 4 CheckBox közül melyiket jelölte be. Ha a helyeset is, akkor a változók értékét átállítjuk 1-re
+    //checks which boxes were marked by the user. if the correct one was marked too, it sets its variable to 1
 
     public void checkBoxScore () {
 
@@ -181,7 +181,7 @@ public class Main2Activity extends AppCompatActivity {
 
     }
 
-    //Elmentjük változókba a felhasználó által beírt szöveget, valamint ha a válasz helyes, a változók értékét átállítjuk 1-re
+    //saves the text that was entered by the user into variables, and if the answer is correct, the variable is set to 1
 
     public void editTextScore () {
         EditText editTextBox1 = (EditText) findViewById(R.id.editText1);
@@ -208,7 +208,7 @@ public class Main2Activity extends AppCompatActivity {
 
     public void showCorrectAnswers() {
 
-        //átírjuk a színeket, ha a válasz helyes illetve helytelen
+        //changes the color depending on the user's correct/incorrect answers
 
         //RadioGroup1
         if (dataFromThirdScreen.q1selected == 2) {
@@ -223,6 +223,7 @@ public class Main2Activity extends AppCompatActivity {
             ((RadioButton) findViewById(R.id.radio_q1a2)).setTextColor(getResources().getColor(R.color.myGreen));
             ((RadioButton) findViewById(dataFromThirdScreen.q1selected)).setChecked(true);
         }
+
         //RadioGroup2
         if (dataFromThirdScreen.q2selected == 2) {
             ((RadioButton) findViewById(R.id.radio_q2a1)).setTextColor(getResources().getColor(R.color.myGreen));
@@ -236,6 +237,7 @@ public class Main2Activity extends AppCompatActivity {
             ((RadioButton) findViewById(R.id.radio_q2a1)).setTextColor(getResources().getColor(R.color.myGreen));
             ((RadioButton) findViewById(dataFromThirdScreen.q2selected)).setChecked(true);
         }
+
         //RadioGroup3
         if (dataFromThirdScreen.q3selected == 2) {
             ((RadioButton) findViewById(R.id.radio_q3a2)).setTextColor(getResources().getColor(R.color.myGreen));
@@ -249,7 +251,8 @@ public class Main2Activity extends AppCompatActivity {
             ((RadioButton) findViewById(R.id.radio_q3a2)).setTextColor(getResources().getColor(R.color.myGreen));
             ((RadioButton) findViewById(dataFromThirdScreen.q3selected)).setChecked(true);
         }
-        //CheckBoxok
+
+        //CheckBoxes
         if (dataFromThirdScreen.cb1selected == true) {
             ((CheckBox) findViewById(R.id.cb1)).setChecked(true);
             ((CheckBox) findViewById(R.id.cb1)).setTextColor(Color.RED);
@@ -273,7 +276,8 @@ public class Main2Activity extends AppCompatActivity {
             ((CheckBox) findViewById(R.id.cb4)).setChecked(true);
             ((CheckBox) findViewById(R.id.cb4)).setTextColor(Color.RED);
         }
-        //EditBoxok
+
+        //EditBoxes
         if (dataFromThirdScreen.editBox1.equals("in the house")) {
             ((EditText) findViewById(R.id.editText1)).setTextColor(getResources().getColor(R.color.myGreen));
             ((EditText) findViewById(R.id.editText1)).setText("in the house");
@@ -309,13 +313,13 @@ public class Main2Activity extends AppCompatActivity {
 
     }
 
-    //kétféle szín kell EditTextnél, ha helytelen a válasz
+    //colors needed at EditText, if the answer is wrong
     private String getColoredSpanned(String text, String color) {
         String input = "<font color=" + color + ">" + text + "</font>";
         return input;
     }
 
-    //csak ellenőrzéskor megjelenő gomb
+    //new game button >> appears only after final check
     public void wantNewGame (View view) {
         Toast.makeText(this, "You will be redirected to start page!", Toast.LENGTH_LONG).show();
 
@@ -328,7 +332,8 @@ public class Main2Activity extends AppCompatActivity {
             }
         }, 3500);
     }
-    //csak ellenőrzéskor megjelenő gomb, kilépés
+
+    //exit
     public void exit (View view) {
         Intent homeIntent = new Intent(Intent.ACTION_MAIN);
         homeIntent.addCategory( Intent.CATEGORY_HOME );
