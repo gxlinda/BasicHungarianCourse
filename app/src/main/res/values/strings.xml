@@ -20,4 +20,13 @@
     <string name="evaluationExcellentJob">Excellent job! You just became the master of basic Hungarian suffixes!</string>
     <string name="redirect1">You will be redirected to start page!</string>
     <string name="redirect2">You will be redirected to start page, where you can start a new game!</string>
+    <string name="result_check">Let\u02b9s see my result</string>
+    <string name="correct_answers">Let\u02b9s see the correct answers</string>
+    <string name="try_again">I try it again</string>
+    <string name="exit">Exit</string>
+    <string name="basic_suffixes">Basic Suffixes</string>
+    <string name="start">Start</string>
+    <string name="from_the_forest">from the forest</string>
+    <string name="in_the_house">in the house</string>
+    <string name="into_the_city">into the city</string>
 </resources>

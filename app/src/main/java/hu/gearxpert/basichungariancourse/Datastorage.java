@@ -12,8 +12,7 @@ public class Datastorage implements Serializable {
     public int answer1 = 0;
     public int answer2 = 0;
     public int answer3 = 0;
-    public int check2 = 0;
-    public int check3 = 0;
+    public int check = 0;
     public int edit1 = 0;
     public int edit2 = 0;
     public int edit3 = 0;
@@ -29,6 +28,6 @@ public class Datastorage implements Serializable {
     public String editBox3 = "";
 
     public void scoreCalculation() {
-        score = answer1 + answer2 + answer3 + check2 + check3 + edit1 + edit2 + edit3;
+        score = answer1 + answer2 + answer3 + check + edit1 + edit2 + edit3;
     }
 }

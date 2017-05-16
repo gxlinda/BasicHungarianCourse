@@ -23,7 +23,7 @@
 
             <TextView
                 style="@style/CardHeaderTheme"
-                android:text="in the house" />
+                android:text="@string/in_the_house" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -54,7 +54,7 @@
 
             <TextView
                 style="@style/CardHeaderTheme"
-                android:text="from the forest" />
+                android:text="@string/from_the_forest" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -86,7 +86,7 @@
 
             <TextView
                 style="@style/CardHeaderTheme"
-                android:text="into the city" />
+                android:text="@string/into_the_city" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -111,7 +111,7 @@
 
         </LinearLayout>
 
-            <!--Test2-->
+        <!--Test2-->
 
         <TextView
             style="@style/TestQuestion"
@@ -187,34 +187,34 @@
             android:layout_height="match_parent">
 
             <!--Can be seen only after the test-->
-        <Button
-            android:id="@+id/checkMyScore"
-            style="@style/ButtonLayout"
-            android:onClick="clickedButtonScore"
-            android:text="Let's see my result"
-            android:layout_centerInParent="true"/>
-
-            <!--Cab be seen only at checking-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_margin="5dp">
-
             <Button
-                android:id="@+id/startNewGame"
+                android:id="@+id/checkMyScore"
                 style="@style/ButtonLayout"
-                android:text="I try it again!"
-                android:onClick="wantNewGame"
-                android:layout_weight="1"/>
+                android:layout_centerInParent="true"
+                android:onClick="clickedButtonScore"
+                android:text="@string/result_check" />
 
-            <Button
-                android:id="@+id/exit"
-                style="@style/ButtonLayout"
-                android:text="Exit"
-                android:onClick="exit"
-                android:layout_weight="1"/>
-        </LinearLayout>
+            <!--Can be seen only at checking-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/startNewGame"
+                    style="@style/ButtonLayout"
+                    android:layout_weight="1"
+                    android:onClick="wantNewGame"
+                    android:text="@string/try_again" />
+
+                <Button
+                    android:id="@+id/exit"
+                    style="@style/ButtonLayout"
+                    android:layout_weight="1"
+                    android:onClick="exit"
+                    android:text="@string/exit" />
+            </LinearLayout>
         </RelativeLayout>
 
     </LinearLayout>

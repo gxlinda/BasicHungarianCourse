@@ -23,7 +23,8 @@ public class Main3Activity extends AppCompatActivity {
         _Data = (Datastorage) intent.getSerializableExtra("dataobject");
 
         TextView scoreView = (TextView) findViewById(R.id.score);
-        scoreView.setText("Your score is " + _Data.score + " points out of 8");
+        scoreView.setText("Your score is " + _Data.score + " points out of 7");
+        Toast.makeText(this, "Your score is " + _Data.score + " points out of 7", Toast.LENGTH_LONG).show();
 
         TextView evaluationView = (TextView) findViewById(evaluation);
 

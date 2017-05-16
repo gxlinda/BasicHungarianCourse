@@ -9,51 +9,51 @@
 
     <TextView
         style="@style/TestQuestion"
-        android:text="@string/score_intro"/>
-<LinearLayout
-    style="@style/CardLayout">
+        android:text="@string/score_intro" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Your score: "
-        android:textColor="#292929"
-        android:layout_margin="5dp"
-        android:padding="10dp"
-        android:id="@+id/score"/>
-</LinearLayout>
+    <LinearLayout style="@style/CardLayout">
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:textColor="#292929"
+            tools:text="Your score: " />
+    </LinearLayout>
+
+    <LinearLayout style="@style/CardLayout">
+
+        <TextView
+            android:id="@+id/evaluation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:textColor="#292929"
+            tools:text="Well done!" />
+
+    </LinearLayout>
 
     <LinearLayout
-        style="@style/CardLayout">
-
-    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Well done!"
-        android:textColor="#292929"
+        android:layout_height="match_parent"
         android:layout_margin="5dp"
-        android:padding="10dp"
-        android:id="@+id/evaluation"/>
+        android:orientation="horizontal">
 
-</LinearLayout>
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:orientation="horizontal"
-      android:layout_margin="5dp">
+        <Button
+            style="@style/ButtonLayout"
+            android:layout_weight="1"
+            android:onClick="wantNewGame"
+            android:text="@string/try_again" />
 
-      <Button
-          style="@style/ButtonLayout"
-          android:text="I try it again!"
-          android:onClick="wantNewGame"
-          android:layout_weight="1"/>
-
-      <Button
-          style="@style/ButtonLayout"
-          android:text="Let's see the correct answers!"
-          android:onClick="seeCorrectAnswers"
-          android:layout_weight="1"/>
-  </LinearLayout>
+        <Button
+            style="@style/ButtonLayout"
+            android:layout_weight="1"
+            android:onClick="seeCorrectAnswers"
+            android:text="@string/correct_answers" />
+    </LinearLayout>
 
 
 </LinearLayout>

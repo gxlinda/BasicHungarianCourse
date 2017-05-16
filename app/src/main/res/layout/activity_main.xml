@@ -14,7 +14,7 @@
 
     <TextView
         style="@style/TestQuestion"
-        android:text="Basic Suffixes" />
+        android:text="@string/basic_suffixes" />
 
     <TextView
         android:layout_width="match_parent"
@@ -120,7 +120,7 @@
 
     <Button
         style="@style/ButtonLayout"
-        android:text="Start"
+        android:text="@string/start"
         android:onClick="clickedButtonStart"/>
 
     </LinearLayout>

@@ -162,20 +162,18 @@ public class Main2Activity extends AppCompatActivity {
         CheckBox CheckBox2 = (CheckBox) findViewById(R.id.cb2);
         boolean cb2 = CheckBox2.isChecked();
         Data.cb2selected = cb2;
-        if (cb2) {
-            Data.check2 = 1;
-        }
 
         CheckBox CheckBox3 = (CheckBox) findViewById(R.id.cb3);
         boolean cb3 = CheckBox3.isChecked();
         Data.cb3selected = cb3;
-        if (cb3) {
-            Data.check3 = 1;
-        }
 
         CheckBox CheckBox4 = (CheckBox) findViewById(R.id.cb4);
         boolean cb4 = CheckBox4.isChecked();
         Data.cb4selected = cb4;
+
+        if (cb2 == true && cb3 == true && cb1 == false && cb4 == false) {
+            Data.check = 1;
+        }
 
     }
 
@@ -185,21 +183,21 @@ public class Main2Activity extends AppCompatActivity {
         EditText editTextBox1 = (EditText) findViewById(R.id.editText1);
         String editTextValue1 = editTextBox1.getText().toString();
         Data.editBox1 = editTextValue1;
-        if (editTextValue1.equals("in the house")) {
+        if (editTextValue1.equalsIgnoreCase("in the house")) {
             Data.edit1 = 1;
         }
 
         EditText editTextBox2 = (EditText) findViewById(R.id.editText2);
         String editTextValue2 = editTextBox2.getText().toString();
         Data.editBox2 = editTextValue2;
-        if (editTextValue2.equals("from the forest")) {
+        if (editTextValue2.equalsIgnoreCase("from the forest")) {
             Data.edit2 = 1;
         }
 
         EditText editTextBox3 = (EditText) findViewById(R.id.editText3);
         String editTextValue3 = editTextBox3.getText().toString();
         Data.editBox3 = editTextValue3;
-        if (editTextValue3.equals("into the city")) {
+        if (editTextValue3.equalsIgnoreCase("into the city")) {
             Data.edit3 = 1;
         }
     }
