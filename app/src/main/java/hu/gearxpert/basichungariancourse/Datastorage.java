@@ -3,7 +3,7 @@ package hu.gearxpert.basichungariancourse;
 import java.io.Serializable;
 
 /**
- * Created by melinda.kostenszki on 2017.02.20..
+ * Created by melinda.kostenszki on 2017.02.20.
  */
 
 public class Datastorage implements Serializable {
@@ -12,9 +12,6 @@ public class Datastorage implements Serializable {
     public int answer1 = 0;
     public int answer2 = 0;
     public int answer3 = 0;
-    public int answer4 = 0;
-    public int answer5 = 0;
-    public int answer6 = 0;
     public int check2 = 0;
     public int check3 = 0;
     public int edit1 = 0;
