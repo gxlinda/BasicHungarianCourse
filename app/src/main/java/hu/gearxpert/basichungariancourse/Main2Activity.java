@@ -65,7 +65,6 @@ public class Main2Activity extends AppCompatActivity {
 
     }
 
-
     /**We make an intent so Main3Activity can get the final score */
     /** Called when the user clicks the Let's see my result! button */
 
@@ -320,7 +319,7 @@ public class Main2Activity extends AppCompatActivity {
 
     //new game button >> appears only after final check
     public void wantNewGame (View view) {
-        Toast.makeText(this, "You will be redirected to start page!", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, R.string.redirect1, Toast.LENGTH_LONG).show();
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {

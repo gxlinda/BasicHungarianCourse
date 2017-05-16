@@ -44,7 +44,7 @@ public class Main3Activity extends AppCompatActivity {
      */
 
     public void wantNewGame (View view) {
-        Toast.makeText(this, "You will be redirected to start page!", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, R.string.redirect1, Toast.LENGTH_LONG).show();
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -61,7 +61,7 @@ public class Main3Activity extends AppCompatActivity {
      */
     @Override
     public void onBackPressed() {
-        Toast.makeText(this, "You will be redirected to start page, where you can start a new game!", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, R.string.redirect2, Toast.LENGTH_LONG).show();
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -80,4 +80,5 @@ public class Main3Activity extends AppCompatActivity {
         myIntent.putExtra("_dataobject", _Data);
         startActivity(myIntent);
     }
+
 }

@@ -18,4 +18,6 @@
     <string name="evaluationNotBad">Not bad, but you need a little more practice to make it much better!</string>
     <string name="evaluationReallyGood">Really good! If you learn a bit more, you can be an expert!</string>
     <string name="evaluationExcellentJob">Excellent job! You just became the master of basic Hungarian suffixes!</string>
+    <string name="redirect1">You will be redirected to start page!</string>
+    <string name="redirect2">You will be redirected to start page, where you can start a new game!</string>
 </resources>

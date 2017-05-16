@@ -31,8 +31,4 @@ public class Datastorage implements Serializable {
     public void scoreCalculation() {
         score = answer1 + answer2 + answer3 + check2 + check3 + edit1 + edit2 + edit3;
     }
-
-
-
-
 }
