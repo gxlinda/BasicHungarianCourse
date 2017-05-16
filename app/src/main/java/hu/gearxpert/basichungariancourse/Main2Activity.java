@@ -181,21 +181,21 @@ public class Main2Activity extends AppCompatActivity {
         EditText editTextBox1 = (EditText) findViewById(R.id.editText1);
         String editTextValue1 = editTextBox1.getText().toString();
         Data.editBox1 = editTextValue1;
-        if (editTextValue1.equalsIgnoreCase("in the house")) {
+        if (editTextValue1.equalsIgnoreCase(getString(R.string.in_the_house))) {
             Data.edit1 = 1;
         }
 
         EditText editTextBox2 = (EditText) findViewById(R.id.editText2);
         String editTextValue2 = editTextBox2.getText().toString();
         Data.editBox2 = editTextValue2;
-        if (editTextValue2.equalsIgnoreCase("from the forest")) {
+        if (editTextValue2.equalsIgnoreCase(getString(R.string.from_the_forest))) {
             Data.edit2 = 1;
         }
 
         EditText editTextBox3 = (EditText) findViewById(R.id.editText3);
         String editTextValue3 = editTextBox3.getText().toString();
         Data.editBox3 = editTextValue3;
-        if (editTextValue3.equalsIgnoreCase("into the city")) {
+        if (editTextValue3.equalsIgnoreCase(getString(R.string.into_the_city))) {
             Data.edit3 = 1;
         }
     }
