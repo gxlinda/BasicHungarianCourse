@@ -12,9 +12,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-
 public class Main2Activity extends AppCompatActivity {
-
 
     Datastorage Data = new Datastorage();
     Datastorage dataFromThirdScreen = null;
@@ -171,7 +169,7 @@ public class Main2Activity extends AppCompatActivity {
         boolean cb4 = CheckBox4.isChecked();
         Data.cb4selected = cb4;
 
-        if (cb2 == true && cb3 == true && cb1 == false && cb4 == false) {
+        if ((cb2 == true) && (cb3 == true) && (cb1 == false) && (cb4 == false)) {
             Data.check = 1;
         }
 
